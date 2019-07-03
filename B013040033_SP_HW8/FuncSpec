@@ -1,0 +1,62 @@
+Functional Spec for Short Message Service
+
+This is a skeletal project to illustrate many issues in Client-Server
+programming. The emphasis is on monitoring and error-handling.
+
+The program is a model of what might be at the middle layer of 3-tier
+architecture of a short messaging service. Mail comes in from potentially
+a large number of clients and gets forwarded to their pagers/mobile phones.
+In the model, instead of mail, the client is just a telnet session.
+If all goes well, all that happens is that the server appends incoming
+messages to files. The client specifies the file in the first line
+of his dialog. Subsequent lines form the body of the message.
+
+In the server, there are four different kinds of activity going on
+at the same time (hence threads). The activities are :-
+	1. A port listener listening for new connect requests
+	2. Servlet (one per client, each in its own thread)
+	   This copies what the client sends into memory and deals with 
+	   issues such as premature death of the client and over-wordiness.
+	3. Garbage collector - deals with completed messages,
+	   writes them to file, and frees the in-memory data-structure.
+	   It is also responsible for keeping the in-memory statistics
+	   data-structure up to date.
+	4. A monitor program, driven by an operator, who can, from
+		time to time :-
+		    list number of current connections
+		    Summarise statistics
+		    re-start statistics
+		    zap stale clients and free memory
+
+A number of business rules must be followed :
+1. Writing to file happens ONLY when a connection is properly terminated,
+   ie when the user types --- in a line by itself.
+2. If a user writes a message which is too long, it will be aborted.
+3. User sessions, at the discretion of the administrator, will be 
+   terminated if they take too long.
+
+Although this project is light on functionality, it should focus
+the mind on the relevant issues.
+
+The project lends itself to being tackled by a team. The hard part
+(alternatively the fun bit) is the design and functional decomposition
+and this has already been done. Had we but world enough and time, the design
+could be part of the exercise. If, however, we want to use this project
+as a peg upon which to hang ideas about threads, sockets, mutual exclusion,
+etc., then we probably want to accept the framework graciously.
+Careful study of the include file should give a strong clue.
+As a rough guide to the work involved (and therefore how it might be
+shared around) here is the output from wc (word count)
+
+10	zero_stats.c
+11	list_conn.c
+13	garbo.c
+13	get_stale.c
+13	menu.c
+14	disconnect.c
+15	zap_stale.c
+21	list_stats.c
+25	zap_servlet.c
+26	listen_port.c
+29	sms_server.c
+34	serve_client.c

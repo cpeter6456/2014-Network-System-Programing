@@ -1,0 +1,32 @@
+total 144
+-rw-rw-r-- 1 cpeter cpeter     0 Oct 18 08:34 aa
+-rw-rw-r-- 1 cpeter cpeter   152 Oct 18 08:32 aa2
+-rw-rw-r-- 1 cpeter cpeter  4683 Oct  6 07:48 builtin.c
+-rw-rw-r-- 1 cpeter cpeter  5864 Oct 18 08:34 builtin.o
+-rw-rw-r-- 1 cpeter cpeter   510 Oct  6 06:51 is_background.c
+-rw-rw-r-- 1 cpeter cpeter  1720 Oct 18 08:34 is_background.o
+-rw-rw-r-- 1 cpeter cpeter   436 Oct 18 08:21 Makefile
+-rw-rw-r-- 1 cpeter cpeter   422 Oct  6 06:43 Makefile~
+-rwxrwxr-x 1 cpeter cpeter 20104 Oct 18 08:34 myshell
+-rw-rw-r-- 1 cpeter cpeter  2241 Oct 17 10:13 parse.c
+-rw-rw-r-- 1 cpeter cpeter  2840 Oct 18 08:34 parse.o
+-rw-rw-r-- 1 cpeter cpeter  2642 Oct  6 06:56 pipe_command.c
+-rw-rw-r-- 1 cpeter cpeter  2904 Oct 18 08:34 pipe_command.o
+-rw-rw-r-- 1 cpeter cpeter   724 Oct  6 06:55 pipe_present.c
+-rw-rw-r-- 1 cpeter cpeter  1656 Oct 18 08:34 pipe_present.o
+-rw-rw-r-- 1 cpeter cpeter  1024 Oct  6 06:57 redirect_in.c
+-rw-rw-r-- 1 cpeter cpeter  2048 Oct 18 08:34 redirect_in.o
+-rw-rw-r-- 1 cpeter cpeter  1128 Oct  6 06:58 redirect_out.c
+-rw-rw-r-- 1 cpeter cpeter  2048 Oct 18 08:34 redirect_out.o
+-rw-rw-r-- 1 cpeter cpeter  1514 Oct 18 08:19 run_command.c
+-rw-rw-r-- 1 cpeter cpeter  1522 Oct 18 08:18 run_command.c~
+-rw-rw-r-- 1 cpeter cpeter  3184 Oct 18 08:34 run_command.o
+-rw-rw-r-- 1 cpeter cpeter   783 Oct 17 08:13 shell.c
+-rw-rw-r-- 1 cpeter cpeter   717 Oct 18 08:17 shell.h
+-rw-rw-r-- 1 cpeter cpeter   716 Oct 18 08:17 shell.h~
+-rw-rw-r-- 1 cpeter cpeter  2408 Oct 18 08:34 shell.o
+-rw-r--r-- 1 cpeter cpeter  2298 Oct 18 08:34 timer.c
+-rw-r--r-- 1 cpeter cpeter  2298 Oct 18 08:32 timer.c~
+-rw-rw-r-- 1 cpeter cpeter  2224 Oct 18 08:34 timer.o
+drwxrwxr-x 5 cpeter cpeter  4096 Oct 13 06:06 Untitled Folder
+drwxrwxr-x 2 cpeter cpeter  4096 Oct 13 06:06 Untitled Folder 2
